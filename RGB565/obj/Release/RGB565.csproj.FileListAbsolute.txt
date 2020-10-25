@@ -6,3 +6,14 @@ c:\users\lucas\documents\visual studio 2013\Projects\RGB565\RGB565\obj\Release\R
 c:\users\lucas\documents\visual studio 2013\Projects\RGB565\RGB565\obj\Release\RGB565.csproj.GenerateResource.Cache
 c:\users\lucas\documents\visual studio 2013\Projects\RGB565\RGB565\obj\Release\RGB565.exe
 c:\users\lucas\documents\visual studio 2013\Projects\RGB565\RGB565\obj\Release\RGB565.pdb
+C:\software\rgb-converter2\RGB565\bin\Release\RGB565.exe.config
+C:\software\rgb-converter2\RGB565\bin\Release\RGB565.exe
+C:\software\rgb-converter2\RGB565\bin\Release\RGB565.pdb
+C:\software\rgb-converter2\RGB565\bin\Release\RGB565.exe.CodeAnalysisLog.xml
+C:\software\rgb-converter2\RGB565\bin\Release\RGB565.exe.lastcodeanalysissucceeded
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.csprojAssemblyReference.cache
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.Form1.resources
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.Properties.Resources.resources
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.csproj.GenerateResource.cache
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.exe
+C:\software\rgb-converter2\RGB565\obj\Release\RGB565.pdb

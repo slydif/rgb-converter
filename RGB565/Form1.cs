@@ -65,6 +65,25 @@ namespace RGB565
             {
                 textBox1.Text = item.Remove(item.Length - 1, 1);
                 textBox1.SelectionStart = textBox1.Text.Length;
+            } else
+            {
+                Color c;
+                try
+                {
+                    String s = textBox1.Text;
+                    int i,nr0Add = 6 - s.Length;
+                    for (i=0 ; i<nr0Add ; i++)
+                    {
+                        s = "0" + s;
+                    }
+                    s = "#" + s;
+                    c = ColorTranslator.FromHtml(s);
+                    textBox1.BackColor = c;
+                }
+                catch (Exception ex)
+                {
+                    textBox1.BackColor = Color.White;
+                }
             }
         }
 
@@ -115,7 +134,44 @@ namespace RGB565
             {
                 textBox2.Text = item.Remove(item.Length - 1, 1);
                 textBox2.SelectionStart = textBox2.Text.Length;
+            } else
+            {
+                Color c;
+                try
+                {
+                    String s = get32From16(textBox2.Text);
+                    int i,nr0Add = 6 - s.Length;
+                    for (i=0 ; i<nr0Add ; i++)
+                    {
+                        s = "0" + s;
+                    }
+                    s = "#" + s;
+                    c = ColorTranslator.FromHtml(s);
+                    textBox2.BackColor = c;
+                }
+                catch (Exception ex)
+                {
+                    textBox2.BackColor = Color.White;
+                }
             }
+        }
+        private String get32From16(String s16)
+        {
+            int RGB888 = 0x000000;
+            int RGB565 = Convert.ToInt32(s16, 16);
+            int byte_r = (RGB565 & 0xF800) >> 11;
+            int byte_g = (RGB565 & 0x07E0) >> 5;
+            int byte_b = RGB565 & 0x1F;
+
+            byte_r = (byte_r * 527 + 23) >> 6;
+            byte_g = (byte_g * 259 + 33) >> 6;
+            byte_b = (byte_b * 527 + 23) >> 6;
+
+            RGB888 = RGB888 | (byte_r << 16);
+            RGB888 = RGB888 | (byte_g << 8);
+            RGB888 = RGB888 | (byte_b);
+
+            return String.Format("{0:X}", RGB888);
         }
     }
 }
